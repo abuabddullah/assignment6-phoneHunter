@@ -143,7 +143,7 @@ const displayDetails = (datas) => {
                                 <li>DisplaySize : ${datas.mainFeatures.displaySize}</li>
                             </ul>
                         </div>
-                        <div class="col-sm-4 border-end border-start">
+                        <div class="col-sm-4 border-sm-end border-sm-start">
                             <strong>Sensors</strong>
                             <ul class="list-unstyled">
                                 <li>Sensors-1 : ${datas.mainFeatures.sensors[0]}</li>
