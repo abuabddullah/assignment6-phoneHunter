@@ -1,0 +1,44 @@
+Compulsory:
+Name: “Phone Hub”
+Search Box + Search Button
+Search result if not found an alert massage
+Search result if found
+Card
+Phone Pic
+Phone Name
+Phone Brand
+Button “Explore”
+If clicked  “Explore”
+Middle of search Box and Results a card will generate
+Phone Pic
+Phone Name
+Phone Brand
+Phone Release Date if not available show alert sms
+Phone Release Date if available show it
+Main features
+Chipset
+Memory
+Storage
+Display size
+Arrow function
+Not use For loop use map / foreach
+Minimum 6 reasonable commits
+Responsive for Mobile-1 col and Pc-3 col
+
+
+Bonus:
+Show sensor information in details card
+Others information in details card
+If search.length > 20 show max show 20
+Code clean
+Comment
+Design reasonable
+Extra pic
+
+
+Optional:
+Bs5 opt
+Fetch / async any opt
+Add show all button for to see more than 20 results
+Add Spinner
+Case sensitivity
