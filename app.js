@@ -183,7 +183,7 @@ const displayDetails = (datas) => {
                 </table>
 
                 <p class="text-center">
-                    <a href="#" class="btn btn-primary" id="deleteIt">Delete</a>
+                    <a href="#" class="btn btn-primary" onclick="deleteIt(event)" id="deleteSelf">Delete</a>
                 </p>
             </div>
         </div>
@@ -192,4 +192,8 @@ const displayDetails = (datas) => {
     `;
 
     detailsOfPhone.appendChild(aDiv);
+}
+
+const deleteIt = (event) => {
+    console.log(event.target.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.innerText = '');
 }
