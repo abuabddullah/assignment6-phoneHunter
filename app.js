@@ -21,6 +21,9 @@ toggle('searchResults', 'none'); // hide searchResults
 
 searchBtnTag.addEventListener('click', () => {
     toggle('spinner', 'block'); // show spinner
+    toggle('alert4ValidKey', 'none'); // hide alert4ValidKey
+    toggle('alert4NoResult', 'none'); // hide alert4NoResult
+    toggle('alert4Results', 'none'); // hide alert4Results
 
     let searchText = searchInputTag.value;
     searchInputTag.value = '';
@@ -101,6 +104,8 @@ const displayJsonData = (datas) => {
 
 const exploreDetails = (slugCode) => {
     toggle('spinner', 'block'); // show spinner
+    toggle('alert4ValidKey', 'none'); // hide alert4ValidKey
+    toggle('alert4NoResult', 'none'); // hide alert4NoResult
     toggle('alert4Results', 'none'); // hide alert4Results
 
     let url = `https://openapi.programming-hero.com/api/phone/${slugCode}`
