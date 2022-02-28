@@ -16,7 +16,7 @@ toggle('spinner', 'none'); // hide spinner
 toggle('alert4ValidKey', 'none'); // hide alert4ValidKey
 toggle('alert4NoResult', 'none'); // hide alert4NoResult
 toggle('alert4Results', 'none'); // hide alert4Results
-// toggle('detailsExplored', 'none'); // hide detailsExplored
+toggle('detailsExplored', 'none'); // hide detailsExplored
 toggle('searchResults', 'none'); // hide searchResults
 
 searchBtnTag.addEventListener('click', () => {
@@ -96,12 +96,6 @@ const displayJsonData = (datas) => {
 
 
     toggle('spinner', 'none'); // hide spinner
-
-    // console.log(results);
-    // console.log(element.image);
-    // console.log(element.phone_name);
-    // console.log(element.brand);
-    // console.log(element.slug);
 }
 
 
@@ -128,32 +122,74 @@ const displayDetails = (datas) => {
 
     aDiv.innerHTML = `
     
+    <div class="card shadow p-3">
+    <div class="row align-items-center">
+        <div class="col-sm-4">
+            <img src="${datas.image}" class="p-3 card-img-top" alt="...">
+        </div>
+        <div class="col-sm-8">
+            <div class="card-body">
+                <h5 class="card-title">${datas.name}</h5>
+                <p class="card-text">One of the best phone of <strong> ${datas.brand} </strong>
+                    released on <strong> ${datas.releaseDate ? datas.releaseDate : 'Not Released Yet'} </strong>. Features are breaking down bellow,</p>
+
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Features</th>
+                            <th scope="col">Sensors</th>
+                            <th scope="col">Others</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>${datas.mainFeatures.chipSet}</td>
+                            <td>${datas.mainFeatures.sensors[0]}</td>
+                            <td>${datas.others.Bluetooth}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>${datas.mainFeatures.memory}</td>
+                            <td>${datas.mainFeatures.sensors[1]}</td>
+                            <td>${datas.others.GPS}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>${datas.mainFeatures.storage}</td>
+                            <td>${datas.mainFeatures.sensors[2]}</td>
+                            <td>${datas.others.NFC}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>${datas.mainFeatures.displaySize}</td>
+                            <td>${datas.mainFeatures.sensors[3]}</td>
+                            <td>${datas.others.Radio}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td></td>
+                            <td>${datas.mainFeatures.sensors[4]}</td>
+                            <td>${datas.others.USB}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td></td>
+                            <td>${datas.mainFeatures.sensors[5]}</td>
+                            <td>${datas.others.WLAN}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p class="text-center">
+                    <a href="#" class="btn btn-primary" id="deleteIt">Delete</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
     `;
 
     detailsOfPhone.appendChild(aDiv);
-
-    console.log(datas);
-    console.log(datas.image);
-    console.log(datas.name);
-    console.log(datas.brand);
-    console.log(datas.releaseDate);
-    console.log(datas.mainFeatures);
-    console.log(datas.mainFeatures.chipSet);
-    console.log(datas.mainFeatures.memory);
-    console.log(datas.mainFeatures.storage);
-    console.log(datas.mainFeatures.displaySize);
-    console.log(datas.mainFeatures.sensors);
-    console.log(datas.mainFeatures.sensors[0]);
-    console.log(datas.mainFeatures.sensors[1]);
-    console.log(datas.mainFeatures.sensors[2]);
-    console.log(datas.mainFeatures.sensors[3]);
-    console.log(datas.mainFeatures.sensors[4]);
-    console.log(datas.mainFeatures.sensors[5]);
-    console.log(datas.others);
-    console.log(datas.others.Bluetooth);
-    console.log(datas.others.GPS);
-    console.log(datas.others.NFC);
-    console.log(datas.others.Radio);
-    console.log(datas.others.USB);
-    console.log(datas.others.WLAN);
 }
