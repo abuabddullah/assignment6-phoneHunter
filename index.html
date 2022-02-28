@@ -98,54 +98,41 @@
                                             released on <strong> ${datas.releaseDate ? datas.releaseDate : 'Not Released
                                                 Yet'} </strong>. Features are breaking down bellow,</p>
 
-                                        <table class="table table-striped table-hover">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">#</th>
-                                                    <th scope="col">Features</th>
-                                                    <th scope="col">Sensors</th>
-                                                    <th scope="col">Others</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">1</th>
-                                                    <td>Feature1</td>
-                                                    <td>Sensor1</td>
-                                                    <td>Other1</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">2</th>
-                                                    <td>Feature2</td>
-                                                    <td>Sensor2</td>
-                                                    <td>Other2</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">3</th>
-                                                    <td>Feature3</td>
-                                                    <td>Sensor3</td>
-                                                    <td>Other3</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">4</th>
-                                                    <td>Feature4</td>
-                                                    <td>Sensor4</td>
-                                                    <td>Other4</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">5</th>
-                                                    <td></td>
-                                                    <td>Sensor5</td>
-                                                    <td>Other5</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">6</th>
-                                                    <td></td>
-                                                    <td>Sensor6</td>
-                                                    <td>Other6</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <strong>Features</strong>
+                                                <ul class="list-unstyled">
+                                                    <li>ChipSet : ${datas.mainFeatures.chipSet}</li>
+                                                    <li>Memory : ${datas.mainFeatures.memory}</li>
+                                                    <li>Storage : ${datas.mainFeatures.Storage}</li>
+                                                    <li>DisplaySize : ${datas.mainFeatures.displaySize}</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <strong>Sensors</strong>
+                                                <ul class="list-unstyled">
+                                                    <li>Sensors-0 : ${datas.mainFeatures.sensors[0]}</li>
+                                                    <li>Sensors-1 : ${datas.mainFeatures.sensors[1]}</li>
+                                                    <li>Sensors-2 : ${datas.mainFeatures.sensors[2]}</li>
+                                                    <li>Sensors-3 : ${datas.mainFeatures.sensors[3]}</li>
+                                                    <li>Sensors-4 : ${datas.mainFeatures.sensors[4]}</li>
+                                                    <li>Sensors-5 : ${datas.mainFeatures.sensors[5]}</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <strong>Others</strong>
+                                                <ul class="list-unstyled">
+                                                    <li>Sensors-0 : ${datas.others.Bluetooth}</li>
+                                                    <li>Sensors-0 : ${datas.others.GPS}</li>
+                                                    <li>Sensors-0 : ${datas.others.NFC}</li>
+                                                    <li>Sensors-0 : ${datas.others.Radio}</li>
+                                                    <li>Sensors-0 : ${datas.others.USB}</li>
+                                                    <li>Sensors-0 : ${datas.others.WLAN}</li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+
 
                                         <p class="text-center">
                                             <a href="#" class="btn btn-primary" id="deleteIt">Delete</a>

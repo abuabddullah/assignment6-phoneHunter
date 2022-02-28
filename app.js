@@ -122,68 +122,54 @@ const displayDetails = (datas) => {
 
     aDiv.innerHTML = `
     
-    <div class="card shadow p-3">
+    <div class="card shadow-lg p-3">
     <div class="row align-items-center">
         <div class="col-sm-4">
             <img src="${datas.image}" class="p-3 card-img-top" alt="...">
         </div>
         <div class="col-sm-8">
             <div class="card-body">
-                <h5 class="card-title">${datas.name}</h5>
+                <h5 class="card-title text-danger font-poppins fw-bold">${datas.name}</h5>
                 <p class="card-text">One of the best phone of <strong> ${datas.brand} </strong>
                     released on <strong> ${datas.releaseDate ? datas.releaseDate : 'Not Released Yet'} </strong>. Features are breaking down bellow,</p>
 
-                <table class="table table-striped table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Features</th>
-                            <th scope="col">Sensors</th>
-                            <th scope="col">Others</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>${datas.mainFeatures.chipSet}</td>
-                            <td>${datas.mainFeatures.sensors[0]}</td>
-                            <td>${datas.others.Bluetooth}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>${datas.mainFeatures.memory}</td>
-                            <td>${datas.mainFeatures.sensors[1]}</td>
-                            <td>${datas.others.GPS}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>${datas.mainFeatures.storage}</td>
-                            <td>${datas.mainFeatures.sensors[2]}</td>
-                            <td>${datas.others.NFC}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-                            <td>${datas.mainFeatures.displaySize}</td>
-                            <td>${datas.mainFeatures.sensors[3]}</td>
-                            <td>${datas.others.Radio}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">5</th>
-                            <td></td>
-                            <td>${datas.mainFeatures.sensors[4]}</td>
-                            <td>${datas.others.USB}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">6</th>
-                            <td></td>
-                            <td>${datas.mainFeatures.sensors[5]}</td>
-                            <td>${datas.others.WLAN}</td>
-                        </tr>
-                    </tbody>
-                </table>
+                    <div class="row p-3 my-5 shadow">
+                        <div class="col-sm-4">
+                            <strong>Features</strong>
+                            <ul class="list-unstyled">
+                                <li>ChipSet : ${datas.mainFeatures.chipSet}</li>
+                                <li>Memory : ${datas.mainFeatures.memory}</li>
+                                <li>Storage : ${datas.mainFeatures.Storage}</li>
+                                <li>DisplaySize : ${datas.mainFeatures.displaySize}</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 border-end border-start">
+                            <strong>Sensors</strong>
+                            <ul class="list-unstyled">
+                                <li>Sensors-1 : ${datas.mainFeatures.sensors[0]}</li>
+                                <li>Sensors-2 : ${datas.mainFeatures.sensors[1]}</li>
+                                <li>Sensors-3 : ${datas.mainFeatures.sensors[2]}</li>
+                                <li>Sensors-4 : ${datas.mainFeatures.sensors[3]}</li>
+                                <li>Sensors-5 : ${datas.mainFeatures.sensors[4]}</li>
+                                <li>Sensors-6 : ${datas.mainFeatures.sensors[5]}</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <strong>Others</strong>
+                            <ul class="list-unstyled">
+                                <li>Bluetooth : ${datas.others.Bluetooth}</li>
+                                <li>GPS : ${datas.others.GPS}</li>
+                                <li>NFC : ${datas.others.NFC}</li>
+                                <li>Radio : ${datas.others.Radio}</li>
+                                <li>USB : ${datas.others.USB}</li>
+                                <li>WLAN : ${datas.others.WLAN}</li>
+                            
+                            </ul>
+                        </div>
+                </div>
 
                 <p class="text-center">
-                    <a href="#" class="btn btn-primary" onclick="deleteIt(event)" id="deleteSelf">Delete</a>
+                    <a href="#" class="btn btn-danger" onclick="deleteIt(event)" id="deleteSelf">Delete</a>
                 </p>
             </div>
         </div>
