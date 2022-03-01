@@ -139,7 +139,7 @@ const displayDetails = (datas) => {
                 <div class="col-sm-8">
                     <div class="card-body">
                         <h5 class="card-title text-danger font-poppins fw-bold">${datas.name}</h5>
-                        <p class="card-text">One of the best phone of <strong> ${datas.brand} </strong>
+                        <p class="card-text">One of the best device of <strong> ${datas.brand} </strong>
                         released on <strong> ${datas.releaseDate ? datas.releaseDate : 'Not Released Yet'} </strong>. Features are breaking down bellow,</p>
 
                         <div class="row p-3 my-5 shadow">
