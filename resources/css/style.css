@@ -4,10 +4,12 @@ body {
     background: rgb(253, 227, 196);
 }
 
-.projectTitle {
+.font-poppins {
     font-family: 'Poppins', sans-serif;
 }
 
-.font-poppins {
-    font-family: 'Poppins', sans-serif;
+
+/* for search button */
+#searchBtnTag {
+    cursor: pointer;
 }
