@@ -1,44 +1,48 @@
 Compulsory:
-Name: “Phone Hub”
-Search Box + Search Button
-Search result if not found an alert massage
+Name: “Phone Hub”                                            done
+Search Box + Search Button                                   done
+Search result if not found an alert massage                  done
+
 Search result if found
-Card
-Phone Pic
-Phone Name
-Phone Brand
-Button “Explore”
+Card                                                         done
+Phone Pic                                                    done
+Phone Name                                                   done
+Phone Brand                                                  done
+Button “Explore”                                             done
+
 If clicked  “Explore”
-Middle of search Box and Results a card will generate
-Phone Pic
-Phone Name
-Phone Brand
-Phone Release Date if not available show alert sms
-Phone Release Date if available show it
-Main features
-Chipset
-Memory
-Storage
-Display size
-Arrow function
-Not use For loop use map / foreach
-Minimum 6 reasonable commits
-Responsive for Mobile-1 col and Pc-3 col
+Middle of search Box and Results a card will generate        done
+Phone Pic                                                    done
+Phone Name                                                   done
+Phone Brand                                                  done
+Phone Release Date if not available show alert sms           done
+Phone Release Date if available show it                      done
+Main features                                                done
+Chipset                                                      done
+Memory                                                       done
+Storage                                                      done
+Display size                                                 done
+Arrow function                                               done
+Not use For loop use map / foreach                           done
+Minimum 6 reasonable commits                                 done
+Responsive for Mobile-1 col and Pc-3 col                     done
 
 
 Bonus:
-Show sensor information in details card
-Others information in details card
-If search.length > 20 show max show 20
-Code clean
-Comment
-Design reasonable
+Show sensor information in details card                      done
+Others information in details card                           done
+If search.length > 20 show max show 20                       done
+Code clean                                                   done
+Comment                                                      done
+Design reasonable                                            done
+
 Extra pic
 
 
 Optional:
-Bs5 opt
-Fetch / async any opt
-Add show all button for to see more than 20 results
-Add Spinner
+Bs5 opt                                                      done
+Fetch / async any opt                                        done
+Add show all button for to see more than 20 results          done
+Add Spinner                                                  done
+
 Case sensitivity
