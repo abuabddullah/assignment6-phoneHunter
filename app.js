@@ -2,6 +2,7 @@ let searchInputTag = document.querySelector('#searchInputTag');
 let searchBtnTag = document.querySelector('#searchBtnTag');
 let resultsField = document.querySelector('#resultsField');
 let noOfResults = document.querySelector('#noOfResults');
+let searchKeyWord = document.querySelector('#searchKeyWord');
 let detailsOfPhone = document.querySelector('#detailsOfPhone');
 
 
@@ -11,13 +12,14 @@ const toggle = (id, cssProperty) => {
     document.getElementById(id).style.display = cssProperty;
 }
 
-// hide spinner-alert messages
+// hide spinner and alert messages
 toggle('spinner', 'none'); // hide spinner
 toggle('alert4ValidKey', 'none'); // hide alert4ValidKey
 toggle('alert4NoResult', 'none'); // hide alert4NoResult
 toggle('alert4Results', 'none'); // hide alert4Results
 toggle('detailsExplored', 'none'); // hide detailsExplored
 toggle('searchResults', 'none'); // hide searchResults
+toggle('showAllBtnTag', 'none'); // hide showAllBtnTag
 
 searchBtnTag.addEventListener('click', () => {
     toggle('spinner', 'block'); // show spinner
@@ -35,7 +37,7 @@ searchBtnTag.addEventListener('click', () => {
 
         fetch(url)
             .then(response => response.json())
-            .then(jsonData => displayJsonData(jsonData.data));
+            .then(jsonData => displayJsonData(jsonData.data, searchText));
     } else {
 
         // for empty search
@@ -50,11 +52,10 @@ searchBtnTag.addEventListener('click', () => {
     }
 });
 
-const displayJsonData = (datas) => {
+const displayJsonData = (datas, searchText) => {
     resultsField.innerText = '';
-    let results = datas.slice(0, 20);
 
-    if (results.length == 0) {
+    if (datas.length == 0) {
 
         // for no results
         toggle('alert4NoResult', 'block'); // show alert4NoResult
@@ -63,6 +64,10 @@ const displayJsonData = (datas) => {
         toggle('alert4Results', 'none'); // hide alert4Results
         toggle('detailsExplored', 'none'); // hide detailsExplored
     } else {
+
+        if (datas.length > 20) {
+            toggle('showAllBtnTag', 'block'); // show showAllBtnTag
+        }
 
         // for results        
         toggle('searchResults', 'block'); // show searchResults
@@ -73,10 +78,11 @@ const displayJsonData = (datas) => {
         toggle('detailsExplored', 'none'); // hide detailsExplored
 
         // show no of results found
-        noOfResults.innerText = results.length
+        noOfResults.innerText = datas.length
+        searchKeyWord.innerText = searchText
 
         // show results in the results field
-        results.forEach(element => {
+        datas.slice(0, 20).forEach(element => {
             let aDiv = document.createElement('div');
             aDiv.classList.add('col');
             aDiv.innerHTML = `
