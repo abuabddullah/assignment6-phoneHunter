@@ -145,32 +145,32 @@ const displayDetails = (datas) => {
                             <div class="col-sm-4">
                                 <strong>Features</strong>
                                 <ul class="list-unstyled">
-                                    <li>ChipSet : ${datas.mainFeatures.chipSet}</li>
-                                    <li>Memory : ${datas.mainFeatures.memory}</li>
-                                    <li>Storage : ${datas.mainFeatures.Storage}</li>
-                                    <li>DisplaySize : ${datas.mainFeatures.displaySize}</li>
+                                    <li>ChipSet : ${datas.mainFeatures?.chipSet ? datas.mainFeatures?.chipSet : `Not Defined`}</li>
+                                    <li>Memory : ${datas.mainFeatures?.memory ? datas.mainFeatures?.memory : `Not Defined`}</li>
+                                    <li>Storage : ${datas.mainFeatures?.Storage ? datas.mainFeatures?.Storage : `Not Defined`}</li>
+                                    <li>DisplaySize : ${datas.mainFeatures?.displaySize ? datas.mainFeatures?.displaySize : `Not Defined`}</li>
                                 </ul>
                             </div>
                             <div class="col-sm-4">
                                 <strong>Sensors</strong>
                                 <ul class="list-unstyled">
-                                    <li>Sensors-1 : ${datas.mainFeatures.sensors[0]}</li>
-                                    <li>Sensors-2 : ${datas.mainFeatures.sensors[1]}</li>
-                                    <li>Sensors-3 : ${datas.mainFeatures.sensors[2]}</li>
-                                    <li>Sensors-4 : ${datas.mainFeatures.sensors[3]}</li>
-                                    <li>Sensors-5 : ${datas.mainFeatures.sensors[4]}</li>
-                                    <li>Sensors-6 : ${datas.mainFeatures.sensors[5]}</li>
+                                    <li>Sensors-1 : ${datas.mainFeatures?.sensors[0] ? datas.mainFeatures?.sensors[0] : `Not Defined`}</li>
+                                    <li>Sensors-2 : ${datas.mainFeatures?.sensors[1] ? datas.mainFeatures?.sensors[1] : `Not Defined`}</li>
+                                    <li>Sensors-3 : ${datas.mainFeatures?.sensors[2] ? datas.mainFeatures?.sensors[2] : `Not Defined`}</li>
+                                    <li>Sensors-4 : ${datas.mainFeatures?.sensors[3] ? datas.mainFeatures?.sensors[3] : `Not Defined`}</li>
+                                    <li>Sensors-5 : ${datas.mainFeatures?.sensors[4] ? datas.mainFeatures?.sensors[4] : `Not Defined`}</li>
+                                    <li>Sensors-6 : ${datas.mainFeatures?.sensors[5] ? datas.mainFeatures?.sensors[5] : `Not Defined`}</li>
                                 </ul>
                             </div>
                             <div class="col-sm-4">
                                 <strong>Others</strong>
                                 <ul class="list-unstyled">
-                                    <li>Bluetooth : ${datas.others.Bluetooth}</li>
-                                    <li>GPS : ${datas.others.GPS}</li>
-                                    <li>NFC : ${datas.others.NFC}</li>
-                                    <li>Radio : ${datas.others.Radio}</li>
-                                    <li>USB : ${datas.others.USB}</li>
-                                    <li>WLAN : ${datas.others.WLAN}</li>
+                                    <li>Bluetooth : ${datas.others?.Bluetooth ? datas.others?.Bluetooth : `Not Defined`}</li>
+                                    <li>GPS : ${datas.others?.GPS ? datas.others?.GPS : `Not Defined`}</li>
+                                    <li>NFC : ${datas.others?.NFC ? datas.others?.NFC : `Not Defined`}</li>
+                                    <li>Radio : ${datas.others?.Radio ? datas.others?.Radio : `Not Defined`}</li>
+                                    <li>USB : ${datas.others?.USB? datas.others?.USB:'No Data Found'}</li>
+                                    <li>WLAN : ${datas.others?.WLAN ? datas.others?.WLAN : `Not Defined`}</li>
                                 
                                 </ul>
                             </div>
